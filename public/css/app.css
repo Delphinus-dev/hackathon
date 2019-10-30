@@ -60,8 +60,9 @@ body {
     position: absolute;left:32%;top:35%;width: 20%;height:50%;opacity: 0.8; filter: alpha(opacity=80);
 }
 .progress-bar{
-    position:absolute;top:30%; width: 100%;height: 70%;
+    position:absolute; width: 100%;top:50%;height: 50%;
 }
+
 
 .bandeau_sup {
     height: 120px;
