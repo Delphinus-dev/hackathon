@@ -18,3 +18,109 @@ body {
         font-size: 3.5rem;
     }
 }
+
+/* PAGE JEU */
+
+.container-fluid {
+    width: 680px;
+}
+
+.row, .col-4, .col-6, .col-8 {
+    margin: 0 auto;
+/* Encadré pour voir les limites du formulaire */
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.zoneVisuSeringue {
+    padding: 0;
+
+}
+
+.visuScore {
+    height: 60px;
+}
+
+.visuSeringue {
+    background-image: url("../images/seringue.png");
+    height: 350px;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+/*.niveauSang {
+    background-color: darkred;
+    width: 100%;
+    margin-right: 35px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+
+    !*height: 100px;*!
+
+
+}*/
+
+.progress{
+    position: absolute;left:32%;top:35%;width: 20%;height:50%;opacity: 0.8; filter: alpha(opacity=80);
+}
+.progress-bar{
+    position:absolute;top:30%; width: 100%;height: 70%;
+}
+
+.bandeau_sup {
+    height: 120px;
+}
+
+.affichAvatar {
+    height: 115px;
+    margin: auto;
+}
+
+.affichAvatar .card-body {
+    padding: 0;
+}
+
+.jeuHaut {
+    height: 420px;
+}
+
+.visuIndices .row {
+    height: 50px;
+    margin: 10px auto;
+}
+
+.visuScore h4 {
+    margin: auto;
+}
+
+.gestionIndices {
+    height: 140px;
+}
+
+.affichageFilms {
+    height: 400px;
+}
+
+.gestionIndices img {
+    /*height: 100%;*/
+    width: 80px;
+    margin: 10px 20px;
+}
+
+.gestionIndices p {
+    margin: 0;
+    text-align: center;
+}
+
+.gestionIndices button {
+    margin: 0 20px;
+    width: 100px;
+}
+
+.affichAvatar {
+    padding: 0;
+    width: 200px;
+}
