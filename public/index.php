@@ -7,21 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="Laurent Touret">
     <meta name="generator" content="Jekyll v3.8.5">
-    <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
-
     <title>Horror Quizz</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="css/app.css" rel="stylesheet">
 </head>
 
-<body class="container">
+<body class="container-fluid">
     <section class="home">
         <div>
         <button type="button" class="btn btn-warning">JOUER</button>

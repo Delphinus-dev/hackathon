@@ -1,0 +1,88 @@
+@media (max-width: 640px) {
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: #000000;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 427px auto auto auto auto;
+        font-family: 'Prompt', sans-serif;
+    }
+
+    h1 {
+        color: #ffffff;
+        font-family: 'Lacquer', sans-serif;
+        margin-left: 10px;
+    }
+
+    .card-text {
+        color: #ffffff;
+        font-family: 'Lacquer', sans-serif;
+        text-align: center;
+    }
+
+    .form{
+        color: #ffffff;
+        font-family: 'Lacquer', sans-serif;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .name{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .btn-success{
+        width: 200px;
+        height: auto;
+        float: none;
+        margin: 0 auto;
+
+
+    }
+
+    .btn-warning {
+
+        width: 100px;
+        height: auto;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .btn-link {
+        color: #ffffff;
+    }
+
+    .card-header {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .card-header:first-child {
+        border-radius: 0;
+
+    }
+
+    .card {
+        background-color: #000;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .card-body {
+        color: #ffffff;
+    }
+
+    .btn-link:hover {
+        color: #FFFFFF;
+    }
+
+}

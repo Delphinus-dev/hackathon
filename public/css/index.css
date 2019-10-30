@@ -1,24 +1,22 @@
 @media (max-width: 640px){
 * {
     margin: 0;
+    padding:0;
 }
 
 body {
     background-color: #fff;
     font-family: 'Prompt', sans-serif;
 }
-.container {
-    margin: 0;
+.container-fluid {
     padding: 0;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 427px auto auto auto auto;
+
     font-family: 'Prompt', sans-serif;
     }
 
 
 .home {
-    grid-row: 1/2 ;
+    grid-row: 1/2;
     width: 640px;
     position: relative;
 
@@ -32,7 +30,7 @@ body {
 }
 
 #accordion{
-    grid-row: 2/3 ;
+    grid-row: 2/3;
 
 }
 .btn-link {
@@ -41,7 +39,7 @@ body {
 }
 
 .card-header {
-    background-color: rgba(0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .card-header:first-child {
@@ -52,62 +50,62 @@ body {
 
     background-color: #000;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0rem;
 }
 
 .card-body{
-    color: #ffffff;
+color: #ffffff;
 }
 
 .btn-link:hover {
-    color: #FFFFFF;
+color: #FFFFFF;
 }
 
 .halloffame{
-    grid-row: 3/4 ;
+grid-row: 3/4 ;
 
 }
 #podium-box {
-    margin: 0 auto;
-    display: flex;
+margin: 0 auto;
+display: flex;
 }
 
 .podium-number {
-    font-family: DaggerSquare;
-    font-weight: bold;
-    font-size: 4em;
-    color: white;
+font-weight: bold;
+font-size: 4em;
+color: white;
 }
 
 .step-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+flex: 1;
+display: flex;
+flex-direction: column;
 }
 
 .step-container>div:first-child {
-    margin-top: auto;
-    text-align: center;
+margin-top: auto;
+text-align: center;
 }
 
 .step {
-    text-align: center;
+text-align: center;
 }
 
 .bg-blue {
-    background-color: #d39e00;
+background-color: #d39e00;
 }
 
 #first-step {
-    height: 50%;
+height: 50%;
 }
 
 #second-step {
-    height: 35%;
+height: 35%;
 }
 
 #third-step {
-    height: 30%;
+height: 30%;
 }
 
 }
