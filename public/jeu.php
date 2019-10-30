@@ -25,7 +25,7 @@
 
 </head>
 
-<main role="main" class="container-fluid">
+<main role="main" class="container">
     <div class="row bandeau_sup">
         <div class="col-8 question"><h3>Film 1/10 à trouver</h3></div>
         <div class="col-4 affichAvatar card" style="width: 18rem;">
