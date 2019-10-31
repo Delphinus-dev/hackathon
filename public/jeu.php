@@ -38,6 +38,7 @@ include '../src/functions.php';
                 <p class="card-text2"><?= $_SESSION["nickname"]; ?></p>
             </div>
         </div>
+    <?= var_dump($_SESSION["positionBonFilm"]);?>
 </section>
 <section class="indices">
         <div class="visuIndices">
@@ -76,6 +77,7 @@ include '../src/functions.php';
         </div>
 </section>
 <section class=affichagefilms1">
+    <?php if ($_SESSION['AfficheFilms'][1]==0):?>
     <div class="affichAvatar card affFilm">
         <a href="/valideRep.php?id=1">
         <img src="<?= filmPoster($_SESSION['Films'][1]); ?>" class="card-img-top"  width="300" alt="...">
@@ -84,86 +86,103 @@ include '../src/functions.php';
             <p class="card-text"><?= filmTitre($_SESSION['Films'][1]); ?></p>
         </div>
     </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms2">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=2">
-            <img src="<?= filmPoster($_SESSION['Films'][2]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][2]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][2]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=2">
+                <img src="<?= filmPoster($_SESSION['Films'][2]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][2]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms3">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=3">
-            <img src="<?= filmPoster($_SESSION['Films'][3]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][3]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][3]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=3">
+                <img src="<?= filmPoster($_SESSION['Films'][1]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][3]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms4">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=4">
-            <img src="<?= filmPoster($_SESSION['Films'][4]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][4]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][4]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=4">
+                <img src="<?= filmPoster($_SESSION['Films'][4]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][4]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms5">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=5">
-            <img src="<?= filmPoster($_SESSION['Films'][5]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][5]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][5]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=5">
+                <img src="<?= filmPoster($_SESSION['Films'][5]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][5]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms6">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=6">
-            <img src="<?= filmPoster($_SESSION['Films'][6]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][6]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][6]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=6">
+                <img src="<?= filmPoster($_SESSION['Films'][6]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][6]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms7">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=7">
-            <img src="<?= filmPoster($_SESSION['Films'][7]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][7]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][7]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=7">
+                <img src="<?= filmPoster($_SESSION['Films'][7]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][7]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms8">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=8">
-            <img src="<?= filmPoster($_SESSION['Films'][8]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][8]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][8]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=8">
+                <img src="<?= filmPoster($_SESSION['Films'][8]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][8]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 <section class=affichagefilms9">
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=9">
-            <img src="<?= filmPoster($_SESSION['Films'][9]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
-        <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][9]); ?></p>
+    <?php if ($_SESSION['AfficheFilms'][9]==0):?>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=9">
+                <img src="<?= filmPoster($_SESSION['Films'][9]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
+            <div class="card-body">
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][9]); ?></p>
+            </div>
         </div>
-    </div>
+    <?php endif ?>
 </section>
 
 <section  id="accordion3">

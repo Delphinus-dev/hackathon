@@ -2,7 +2,8 @@
 session_start();
 include '../src/functions.php';
 $reponse=$_GET [ 'id' ] ;
-if ($reponse=$_SESSION["positionBonFilm"]){
+$_SESSION['AfficheFilms'][$reponse]=0;
+if ($reponse==$_SESSION["positionBonFilm"]){
     $_SESSION["vie"]+=$succesFilm;
     $_SESSION["questionEnCours"]+=1;
     if ($_SESSION["questionEnCours"]>10){
@@ -13,7 +14,7 @@ if ($reponse=$_SESSION["positionBonFilm"]){
 }
 else {
     $_SESSION["vie"]-=$erreurFilm;
-    if ($_SESSION["vie"]<=0){
+    if ($_SESSION["vie"]<0){
         header('Location: gameover.php');
         exit;
     }

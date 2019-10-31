@@ -140,8 +140,20 @@ function nouvelleQuestion(){
     $melangeFilms = range(1, 82);
     shuffle($melangeFilms);
 
-    for ($i=0; $i<10; $i++){
+    for ($i=1; $i<10; $i++){
         $_SESSION['Films'][$i]=$melangeFilms[$i];
+        $_SESSION['AfficheFilms'][$i]=1;
+    }
+    $_SESSION["positionBonFilm"]=rand(1, 9);
+}
+
+function enleveFilms(){
+    $melangeFilms = range(1, 9);
+    shuffle($melangeFilms);
+
+    for ($i=1; $i<10; $i++){
+        $_SESSION['Films'][$i]=$melangeFilms[$i];
+        $_SESSION['AfficheFilms'][$i]=1;
     }
     $_SESSION["positionBonFilm"]=rand(1, 9);
 }
