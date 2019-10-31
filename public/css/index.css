@@ -178,7 +178,7 @@ h1 {
     margin: 0;
     display: grid;
     grid-template-columns: 33% 34% 33%;
-    grid-template-rows: 150px auto 550px auto auto auto auto auto;
+    grid-template-rows: 150px auto 550px 220px auto auto auto auto;
 }
 
 .film{
@@ -192,7 +192,7 @@ h1 {
 }
 
 .indices{
-    grid-column: 1/ 3;
+    grid-column: 1 / 3;
     grid-row: 2 / 4;
 }
 
@@ -211,8 +211,13 @@ h1 {
     grid-row: 4 / 5;
 }
 
-.bonus{
-    grid-column: 2 / 4;
+.nesertarien{
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+}
+.bonusRestants{
+    grid-column: 3 / 4;
     grid-row: 4 / 5;
 }
 
@@ -220,18 +225,22 @@ h1 {
     grid-column: 1 / 2;
     grid-row: 5 / 6;
 }
+
 .affichagefilms2{
     grid-column: 2 / 3;
     grid-row: 5 / 6;
 }
+
 .affichagefilms3{
     grid-column: 3 / 4;
     grid-row: 5 / 6;
 }
+
 .affichagefilms4{
     grid-column: 1 / 2;
     grid-row: 6 / 7;
 }
+
 .affichagefilms5{
     grid-column: 2 / 3;
     grid-row: 6 / 7;
@@ -305,10 +314,19 @@ h4{
     position: relative;
 }
 
-.bonusRestants{
-    display: flex;
-    float: row;
+.btn-primary{
+    color: #fff;
+    background-color: #d39e00;
+    border-color: #d39e00;
+
 }
+
+.indRestants{
+    color: #ffffff;
+    text-align: center;
+}
+
+
 
     /*----------JEUold---------
 
