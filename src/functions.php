@@ -7,8 +7,7 @@ include '../vendor/autoload.php';
 use Symfony\Component\HttpClient\HttpClient;
 
 function pasUnder(string $mot): string{
-    $mot = str_replace($mot,'_',' ');
-    return $mot;
+    return str_replace('_',' ', $mot);
 }
 
 function monstre(int $id): array{
@@ -86,11 +85,11 @@ function film(int $id): array{
 }
 
 function filmTitre(int $id): string {
-    return film($id)['movie']['title'];
+    return pasUnder(film($id)['movie']['title']);
 }
 
 function filmRealisateur(int $id): string {
-    return film($id)['movie']['director'];
+    return pasUnder(film($id)['movie']['director']);
 }
 
 function filmAnnee(int $id): string {
@@ -98,7 +97,7 @@ function filmAnnee(int $id): string {
 }
 
 function filmPays(int $id): string {
-    return film($id)['movie']['country'];
+    return pasUnder(film($id)['movie']['country']);
 }
 
 function filmPoster(int $id): string {
@@ -106,7 +105,7 @@ function filmPoster(int $id): string {
 }
 
 function monstreNom(int $id): string {
-    return monstre($id)['monster']['name'];
+    return pasUnder(monstre($id)['monster']['name']);
 }
 
 function monstreImage(int $id): string {
