@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION["avatar"]="1";
+$_SESSION["nickname"]="Guest";
+?>
 <!doctype html>
 <html lang="en">
 
