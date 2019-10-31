@@ -26,151 +26,51 @@ include '../src/functions.php';
         <h1>CHOISIS TON MONSTRE</h1>
     </div>
     <div class="row">
-
         <?php
-        for ($avatar; $avatar < 3; $avatar++):?>
+        for ($cpt = 1; $cpt < 6; $cpt++):?>
             <div class="col-sm card">
-            <img class="card-img-top" src="<?php monstreImage($avatar); ?>" alt="Card image cap">
+                <a href="/choixmonstre.php?id=<?= $cpt ?>">
+                    <img class="card-img-top" src="<?= monstreImage($cpt); ?>" alt="Avatar du monstre <?= monstreNom($cpt); ?>"></a>
             <div class="card-body">
-                <p class="card-text">Maid Ghoul</p>
+                <p class="card-text"><?= monstreNom($cpt); ?></p>
             </div>
         </div>
         <?php endfor; ?>
-
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Maid Ghoul</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Binding Mummy</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Demoniac Cat</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Carrion Screecher</p>
-            </div>
-        </div>
     </div>
     <div class="row">
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Corpse Blockade</p>
+        <?php
+        for ($cpt = 6; $cpt < 11; $cpt++):?>
+            <div class="col-sm card">
+                <a href="/choixmonstre.php?id=<?= $cpt ?>">
+                    <img class="card-img-top" src="<?= monstreImage($cpt); ?>" alt="Avatar du monstre <?= monstreNom($cpt); ?>"></a>
+                <div class="card-body">
+                    <p class="card-text"><?= monstreNom($cpt); ?></p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Dreadhorde Butcher</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Dead Slave</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Lich Lord</p>
-            </div>
-        </div>
+        <?php endfor; ?>
     </div>
-
     <div class="row">
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Vampire Hunter</p>
+        <?php
+        for ($cpt = 11; $cpt < 16; $cpt++):?>
+            <div class="col-sm card"><a href="/choixmonstre.php?id=<?= $cpt ?>">
+                    <img class="card-img-top" src="<?= monstreImage($cpt); ?>" alt="Avatar du monstre <?= monstreNom($cpt); ?>"></a>
+                <div class="card-body">
+                    <p class="card-text"><?= monstreNom($cpt); ?></p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Arrogant Vampire</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Vampire Hexmage</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Vampire Nighthawk</p>
-            </div>
-        </div>
-
+        <?php endfor; ?>
     </div>
-
     <div class="row">
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Vampire Noble</p>
+        <?php
+        for ($cpt = 16; $cpt < 21; $cpt++):?>
+            <div class="col-sm card"><a href="/choixmonstre.php?id=<?= $cpt ?>">
+                    <img class="card-img-top" src="<?= monstreImage($cpt); ?>" alt="Avatar du monstre <?= monstreNom($cpt); ?>"></a>
+                <div class="card-body">
+                    <p class="card-text"><?= monstreNom($cpt); ?></p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Sutured Ghoul</p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Ormendahl, Profane Prince </p>
-            </div>
-        </div>
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Ravenous Demon</p>
-            </div>
-        </div>
+        <?php endfor; ?>
     </div>
-
-    <div class="row">
-        <div class="col-sm card">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Hellcarver Demon</p>
-            </div>
-        </div>
-    <div class="col-sm card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">Illusonary Demon</p>
-        </div>
-    </div>
-    <div class="col-sm card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">The Reaper</p>
-        </div>
-    </div>
-    <div class="col-sm card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-            <p class="card-text">Apocalypse Demon</p>
-        </div>
-    </div>
-    </div>
-
     <div class=row>
         <button type="button" class="btn btn-warning">VALIDER</button>
     </div>
