@@ -1,7 +1,33 @@
 <?php
 session_start();
+include '../src/config.php';
 $_SESSION["avatar"]="1";
 $_SESSION["nickname"]="Guest";
+$_SESSION["bonFilm"]=rand(1, 82);
+$_SESSION["vie"]=$vieInitiale;
+$_SESSION["superBonus"]=3;
+
+$_SESSION["badFilm1"]=rand(1, 82);
+$_SESSION["badFilm2"]=rand(1, 82);
+$_SESSION["badFilm3"]=rand(1, 82);
+$_SESSION["badFilm4"]=rand(1, 82);
+$_SESSION["badFilm5"]=rand(1, 82);
+$_SESSION["badFilm6"]=rand(1, 82);
+$_SESSION["badFilm7"]=rand(1, 82);
+$_SESSION["badFilm8"]=rand(1, 82);
+
+$_SESSION["positionBonFilm"]=rand(1, 9);
+$_SESSION["positionBadFilm1"]=rand(1, 9);
+$_SESSION["positionBadFilm2"]=rand(1, 9);
+$_SESSION["positionBadFilm3"]=rand(1, 9);
+$_SESSION["positionBadFilm4"]=rand(1, 9);
+$_SESSION["positionBadFilm5"]=rand(1, 9);
+$_SESSION["positionBadFilm6"]=rand(1, 9);
+$_SESSION["positionBadFilm7"]=rand(1, 9);
+$_SESSION["positionBadFilm8"]=rand(1, 9);
+
+$_SESSION["questionEnCours"]=1;
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,15 +40,15 @@ $_SESSION["nickname"]="Guest";
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+    <link href="htt://fonts.googleapisps.com/css?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
     <title>Horror Quizz</title>
 </head>
 
 <body class="container-fluid">
     <section class="home">
         <div>
-            <button type="button" class="btn btn-warning">JOUER</button>
+            <a href="/inscription.php"><button type="button" class="btn btn-warning">JOUER</button></a>
         </div>
         <div>
             <img src="images/home.png" alt="">

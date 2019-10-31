@@ -5,3 +5,5 @@ $prixSuperBonus=30;
 $nbImageSuperBonus=3;
 $erreurFilm=10;
 $succesFilm=5;
+$vieInitiale=100;
+$filmsATrouver=10;

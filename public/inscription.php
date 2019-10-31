@@ -16,7 +16,7 @@ include '../src/functions.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
     <title>Horror Quizz</title>
 </head>
 
@@ -31,10 +31,10 @@ include '../src/functions.php';
             <div class="col-sm card">
                 <a href="/choixmonstre.php?id=<?= $cpt ?>">
                     <img class="card-img-top" src="<?= monstreImage($cpt); ?>" alt="Avatar du monstre <?= monstreNom($cpt); ?>"></a>
-            <div class="card-body">
-                <p class="card-text"><?= monstreNom($cpt); ?></p>
+                <div class="card-body">
+                    <p class="card-text"><?= monstreNom($cpt); ?></p>
+                </div>
             </div>
-        </div>
         <?php endfor; ?>
     </div>
     <div class="row">
@@ -71,9 +71,6 @@ include '../src/functions.php';
             </div>
         <?php endfor; ?>
     </div>
-    <div class=row>
-        <button type="button" class="btn btn-warning">VALIDER MON AVATAR</button>
-    </div>
 
 </section>
 
@@ -82,19 +79,16 @@ include '../src/functions.php';
         <div>
             <h1>NOMME TON MONSTRE</h1>
         </div>
-    <form method="post">
-        <div>
-            <label class="form" for="nom">Nickname :</label>
-            <input type="text" name="nickname" required autofocus>
-        </div>
-    </form>
+        <form method="post">
+            <div>
+                <label class="form" for="nom">Nickname :</label>
+                <input type="text" name="nickname">
+            </div>
+        </form>
     </div>
-        <div class="row">
-            <button type="button" class="btn btn-warning valider">VALIDER MON PSEUDO</button>
-        </div>
-        <div class="row">
-        <button type="button" class="btn btn-success">ALLEZ, ON JOUE ?</button>
-        </div>
+    <div class="row">
+        <a href="/jeu.php"><button type="button" class="btn btn-success">ALLEZ, ON JOUE ?</button></a>
+    </div>
 </section>
 
 <section  id="accordion">

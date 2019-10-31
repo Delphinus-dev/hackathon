@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if (!isset($_SESSION["indicesRestants"])){
+    $_SESSION["indicesRestants"]=4;
+}
+
+include '../src/config.php';
+include '../src/functions.php';
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -13,7 +21,7 @@ session_start();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
     <title>PROJET</title>
 
 
@@ -23,11 +31,11 @@ session_start();
 
 <main role="main" class="container-fluid">
     <div class="row bandeau_sup">
-        <div class="col-8 question"><h3>Film 1/10 à trouver</h3></div>
+        <div class="col-8 question"><h3>Film <?= $_SESSION["questionEnCours"]; ?>/<?= $filmsATrouver; ?> à trouver</h3></div>
         <div class="col-4 affichAvatar card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="<?= monstreImage($_SESSION["avatar"]); ?>" class="card-img-top" height="400px"  alt="...">
             <div class="card-body">
-                <p class="card-text">Nickname</p>
+                <p class="card-text"><?= $_SESSION["nickname"]; ?></p>
             </div>
         </div>
     </div>
@@ -41,7 +49,7 @@ session_start();
         </div>
         <div class="col-4 zoneVisuSeringue">
             <div class="row visuScore">
-                <h4>sang dispo:<b>10 L</b></h4>
+                <h4>sang dispo : <b><?= $_SESSION["vie"]; ?> Litres</b></h4>
             </div>
             <div class="row visuSeringue">
                 <div class="progress" >
@@ -54,17 +62,20 @@ session_start();
     </div>
     <div class="row gestionIndices">
         <div class="col-6 indRestants">
-            <p> X indices Restants</p>
-            <button type="button" id="bouton-ind-restants" class="btn btn-primary">indice pour Y litres ?</button>
+            <p> <?= $_SESSION["indicesRestants"]; ?> indices Restants</p>
+            <button type="button" id="bouton-ind-restants" class="btn btn-primary">1 indice pour <?= $prixIndice ?> litres ?</button>
         </div>
         <div class="col-6 bonusRestants">
             <p> X super-bonus</p>
-<!--            --><?php //?><!-- foreach ou for sur nb bonus restants-->
-            <a href=""><img src="images/oeil.png"></a>
+            <?php for ($i = 0; $i < $_SESSION["superBonus"]; $i++):?>
+                <a href=""><img src="images/oeil.png"></a>
+            <?php endfor; ?>
 
         </div>
     </div>
+
     <div class="row affichageFilms">
+
         <div class="col-4 col3Films">
             <div class="affichAvatar card affFilm">
                 <img src="..." class="card-img-top" alt="...">
@@ -72,7 +83,6 @@ session_start();
                     <p class="card-text">Titre du film</p>
                 </div>
             </div>
-            <!--            --><?php //?><!-- foreach ou for sur 3 films ?-->
         </div>
         <div class="col-4 col3Films">
             <div class="affichAvatar card affFilm">
@@ -81,7 +91,6 @@ session_start();
                     <p class="card-text">Titre du film</p>
                 </div>
             </div>
-            <!--            --><?php //?><!-- foreach ou for sur 3 films ?-->
         </div>
         <div class="col-4 col3Films">
             <div class="affichAvatar card affFilm">
@@ -90,8 +99,58 @@ session_start();
                     <p class="card-text">Titre du film</p>
                 </div>
             </div>
-            <!--            --><?php //?><!-- foreach ou for sur 3 films ?-->
         </div>
+
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col3Films">
+            <div class="affichAvatar card affFilm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Titre du film</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -135,22 +194,22 @@ session_start();
         });
 
     });
-        /*iveau_top = parseInt($("#progressbar").attr("data-top"));
-        niveau_height = parseInt($("#progressbar").attr("data-height"));
-        niveau_top -= 5;
-        niveau_height += 5;
-        nt = "" + niveau_top + "%";
-        nh = "" + niveau_height + "%";
-        // $("#progressbar").removeClass("progress-bar2");
-        $("#progressbar").css({top:"70%", height:"30%"});*/
+    /*iveau_top = parseInt($("#progressbar").attr("data-top"));
+    niveau_height = parseInt($("#progressbar").attr("data-height"));
+    niveau_top -= 5;
+    niveau_height += 5;
+    nt = "" + niveau_top + "%";
+    nh = "" + niveau_height + "%";
+    // $("#progressbar").removeClass("progress-bar2");
+    $("#progressbar").css({top:"70%", height:"30%"});*/
 
 
-   /* $("#bouton-ind-restants").click(function ()
-    {
-        var niveau = $("#progressbar").attr("aria-valuenow");
-        niveau -= 5;
-        $("#progressbar").attr("aria-valuenow", niveau);
-    });*/
+    /* $("#bouton-ind-restants").click(function ()
+     {
+         var niveau = $("#progressbar").attr("aria-valuenow");
+         niveau -= 5;
+         $("#progressbar").attr("aria-valuenow", niveau);
+     });*/
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
