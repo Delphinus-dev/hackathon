@@ -1,8 +1,3 @@
-<?php
-session_start();
-$_SESSION["avatar"]="1";
-$_SESSION["nickname"]="Guest";
-?>
 <!doctype html>
 <html lang="en">
 
@@ -21,11 +16,20 @@ $_SESSION["nickname"]="Guest";
 
 <body class="container-fluid">
     <section class="home">
-        <div>
-            <button type="button" class="btn btn-warning">JOUER</button>
+        <div class="audio">
+        <audio controls>
+            <source src="/images/rire.mp3" type="audio/mp3">
+        </audio>
         </div>
         <div>
-            <img src="images/home.png" alt="">
+            <button type="button" class="play btn-warning ">REJOUER</button>
+        </div>
+        <div class="textgameover">
+            <h1> TU AS PERDU ! <br /> TU ES MORT DE FAIM, ALORS REJOUES</h1>
+        </div>
+        <div>
+            <img src="images/gameover.png" alt="">
+
         </div>
     </section>
 
@@ -55,71 +59,7 @@ $_SESSION["nickname"]="Guest";
         </div>
     </section>
 
-    <section class="halloffame">
-        <div id="podium-box" class="row" style="height: 300px">
-            <div class="col-md-4 step-container m-0 p-0">
-                <div>
-                    Text 2
-                </div>
-                <div id="second-step" class="bg-blue step centerBoth podium-number">
-                    2
-                </div>
-            </div>
-            <div class="col-md-4 step-container m-0 p-0">
-                <div>
-                    Text 1
-                </div>
-                <div id="first-step" class="bg-blue step centerBoth podium-number">
-                    1
-                </div>
-            </div>
-            <div class="col-md-4 step-container m-0 p-0">
-                <div>
-                    Text 3
-                </div>
-                <div id="third-step" class="bg-blue step centerBoth podium-number">
-                    3
-                </div>
-            </div>
-        </div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Classement</th>
-                <th scope="col">Monstre</th>
-                <th scope="col">Nickname</th>
-                <th scope="col">Points</th>
-                <th scope="col">Date</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">4</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tr>
-            </tbody>
-            </table>
 
-    </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
