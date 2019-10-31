@@ -135,3 +135,13 @@ function filmsPersonnage(int $id)
 {
     return filmBase($id)['0']['personnage'];
 }
+
+function nouvelleQuestion(){
+    $melangeFilms = range(1, 82);
+    shuffle($melangeFilms);
+
+    for ($i=0; $i<10; $i++){
+        $_SESSION['Films'][$i]=$melangeFilms[$i];
+    }
+    $_SESSION["positionBonFilm"]=rand(1, 9);
+}
