@@ -41,11 +41,9 @@ include '../src/functions.php';
 </section>
 <section class="indices">
         <div class="visuIndices">
-            <div class="indiceFourni"><h2>Texte indice fourni</h2></div>
-            <div class="indice2"><h2>Texte indice 2</h2></div>
-            <div class="indice3"><h2>Texte indice 3</h2></div>
-            <div class="indice4"><h2>Texte indice 4</h2></div>
-            <div class="indice5"><h2>Texte indice 5</h2></div>
+            <div class="indiceFourni"><h2>J'ai été produit en <?= filmAnnee($_SESSION["positionBonFilm"]); ?></h2></div>
+            <div class="indice2"><h2>J'ai été produit en <?= filmPays($_SESSION["positionBonFilm"]); ?></h2></div>
+            <div class="indice3"><h2>J'ai été produit par <?= filmRealisateur($_SESSION["positionBonFilm"]); ?></h2></div>
         </div>
 </section>
 <section class=points">
@@ -75,7 +73,6 @@ include '../src/functions.php';
             <?php endfor; ?>
         </div>
 </section>
-<?= var_dump($_SESSION['AfficheFilms']); ?>
 <section class=affichagefilms1">
     <?php if ($_SESSION['AfficheFilms'][1]!=0):?>
     <div class="affichAvatar card affFilm">

@@ -1,9 +1,9 @@
 <?php
 $nbIndiceDebut=1;
-$prixIndice=10;
-$prixSuperBonus=30;
-$nbImageSuperBonus=3;
-$erreurFilm=10;
-$succesFilm=5;
-$vieInitiale=100;
-$filmsATrouver=10;
+$prixIndice=1;
+$prixSuperBonus=1;
+$nbImageSuperBonus=1;
+$erreurFilm=1;
+$succesFilm=0;
+$vieInitiale=10;
+$filmsATrouver=20;

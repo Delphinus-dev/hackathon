@@ -117,25 +117,6 @@ function monstreDescription(int $id): string {
     return monstre($id)['monster']['description'];
 }
 
-function filmBase(int $id)
-{
-    $sql = "SELECT * FROM complements WHERE id=" . $id;
-    $resultat = $pdo->query($sql);
-    $resultats = $resultat->fetchAll();
-
-    return $resultats;
-}
-
-function filmsActeur(int $id)
-{
-    return filmBase($id)['0']['acteur'];
-}
-
-function filmsPersonnage(int $id)
-{
-    return filmBase($id)['0']['personnage'];
-}
-
 function nouvelleQuestion(){
     $melangeFilms = range(1, 82);
     shuffle($melangeFilms);
@@ -144,6 +125,11 @@ function nouvelleQuestion(){
         $_SESSION['Films'][$i]=$melangeFilms[$i];
         $_SESSION['AfficheFilms'][$i]=1;
     }
+
+    for ($i=2; $i<4; $i++){
+        $_SESSION['AfficheIndice'][$i]=0;
+    }
+
     $_SESSION["positionBonFilm"]=rand(1, 9);
 }
 
