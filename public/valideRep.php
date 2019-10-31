@@ -7,7 +7,7 @@ if ($reponse==$_SESSION["positionBonFilm"]){
     $_SESSION["vie"]+=$succesFilm;
     $_SESSION["questionEnCours"]+=1;
     if ($_SESSION["questionEnCours"]>10){
-        header('Location: win.php');
+        header('Location: winner.php');
         exit;
     }
         nouvelleQuestion();
