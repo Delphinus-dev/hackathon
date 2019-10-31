@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #000;
     font-family: 'Prompt', sans-serif;
 }
 /*----------HOME----------*/
@@ -15,6 +15,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto;
+    background-color: #000;
     }
 
 .home {
@@ -28,9 +29,9 @@ img {
 
 .btn-warning{
     position: absolute;
-    margin-left: 80%;
-    margin-top: 20%;
-    width: 100px;
+    margin-left: 77%;
+    margin-top: 10%;
+    width: 70px;
     height: auto;
 }
 
@@ -125,23 +126,31 @@ height: 30%;
 h1 {
     color: #ffffff;
     font-family: 'Lacquer', sans-serif;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
+.card-body{
+    padding:0;
+}
 .card-text {
     color: #ffffff;
     font-family: 'Lacquer', sans-serif;
     text-align: center;
+}
+.card-img-top {
+    border-radius: 5%;
+    width: 60%;
+
 }
 
 .form{
     color: #ffffff;
     font-family: 'Lacquer', sans-serif;
     text-align: center;
-    margin-left: 10px;
+    margin: 20px auto auto 50px;
 }
 .name{
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -149,7 +158,7 @@ h1 {
     width: 200px;
     height: auto;
     float: none;
-    margin: 0 auto;
+    margin: 10px auto auto 80%;
 }
 
 .valider {
@@ -160,21 +169,155 @@ h1 {
     margin: 0 auto;
     margin-bottom: 20px;
 }
+#accordion-inscription{
 
-    /*----------JEU---------*/
 
-.row, .col-4, .col-6, .col-8 {
-    margin: 0 auto;
-    /* Encadré pour voir les limites du formulaire */
-    padding: 5px;
-    border: 1px solid #CCC;
-    border-radius: 1em;
 }
+    /*----------JEU1---------*/
+.containerjeu {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 150px auto 550px auto auto auto auto auto;
+}
+
+.film{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.nickname{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.indices{
+    grid-column: 1/ 3;
+    grid-row: 2 / 4;
+}
+
+.points{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.seringue{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.gestionindices{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.bonus{
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+}
+
+.affichagefilms1{
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+.affichagefilms2{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+.affichagefilms3{
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+.affichagefilms4{
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+}
+.affichagefilms5{
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+}
+.affichagefilms6{
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
+}
+.affichagefilms7{
+    grid-column: 1 / 2;
+    grid-row: 7 / 8;
+}
+
+.affichagefilms8{
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+}
+
+.affichagefilms9{
+    grid-column: 3 / 4;
+    grid-row: 7 / 8;
+}
+
+#accordion3{
+    grid-column: 1 / 4;
+    grid-row: 8 / 9;
+
+}
+h3{
+    font-size: 2em:;
+    color: #d39e00;
+    margin-top: 10px;
+}
+
+h2{
+    font-size: 1em;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+h4{
+    font-size: 1em;
+    color: #dc3545;
+}
+
+.question{
+    text-align: center;
+}
+
+.card-img-top2 {
+    border-radius: 5%;
+    width: 40%;
+
+}
+.card-text2 {
+    color: #ffffff;
+    font-family: 'Lacquer', sans-serif;
+
+}
+
+.affichAvatar{
+    background-color: #000;
+    padding-left: 30%;
+
+}
+
+.seringue{
+    height: 350px;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bonusRestants{
+    display: flex;
+    float: row;
+}
+
+    /*----------JEUold---------
+
 
 .zoneVisuSeringue {
     padding: 0;
 
 }
+
 
 .visuScore {
     height: 60px;
@@ -189,6 +332,8 @@ h1 {
 
 }
 
+
+
 /*.niveauSang {
     background-color: darkred;
     width: 100%;
@@ -196,7 +341,7 @@ h1 {
     margin-left: 25px;
     margin-bottom: 50px;
     !*height: 100px;*!
-}*/
+}
 
 .progress{
     position: absolute;left:32%;top:35%;width: 20%;height:50%;opacity: 0.8; filter: alpha(opacity=80);
@@ -258,20 +403,25 @@ h1 {
 .affichAvatar {
     padding: 0;
     width: 200px;
-}
+}*/
 
     /*----------GAME OVER--------*/
-. play{
+
+.rejouer{
     margin-left: 75%;
-    margin-top: 80%;
+    margin-top: 20%;
     width: 100px;
     height: auto;
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    position: absolute;
 }
 
 .textgameover {
     position: absolute;
-    margin-left: 10%;
-    margin-top: 90%;
+    margin-left: 5%;
+    margin-top: 25%;
     color: #000000;
 
 }
