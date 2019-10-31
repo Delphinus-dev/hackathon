@@ -1,8 +1,9 @@
 <?php
 
-include '../src/config.php';
-include '../src/db.php';
+include 'config.php';
 include '../vendor/autoload.php';
+include 'db.php';
+
 
 use Symfony\Component\HttpClient\HttpClient;
 
@@ -92,7 +93,7 @@ function filmRealisateur(int $id): string {
     return pasUnder(film($id)['movie']['director']);
 }
 
-function filmAnnee(int $id): string {
+function filmAnnee(int $id): int {
     return film($id)['movie']['year'];
 }
 
@@ -114,4 +115,23 @@ function monstreImage(int $id): string {
 
 function monstreDescription(int $id): string {
     return monstre($id)['monster']['description'];
+}
+
+function filmBase(int $id)
+{
+    $sql = "SELECT * FROM complements WHERE id=" . $id;
+    $resultat = $pdo->query($sql);
+    $resultats = $resultat->fetchAll();
+
+    return $resultats;
+}
+
+function filmsActeur(int $id)
+{
+    return filmBase($id)['0']['acteur'];
+}
+
+function filmsPersonnage(int $id)
+{
+    return filmBase($id)['0']['personnage'];
 }
