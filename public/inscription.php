@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include '../src/functions.php';
 
 ?>
@@ -72,7 +72,7 @@ include '../src/functions.php';
         <?php endfor; ?>
     </div>
     <div class=row>
-        <button type="button" class="btn btn-warning">VALIDER</button>
+        <button type="button" class="btn btn-warning">VALIDER MON AVATAR</button>
     </div>
 
 </section>
@@ -85,15 +85,15 @@ include '../src/functions.php';
     <form method="post">
         <div>
             <label class="form" for="nom">Nickname :</label>
-            <input  type="text"  name="nickname" required autofocus>
+            <input type="text" name="nickname" required autofocus>
         </div>
     </form>
     </div>
         <div class="row">
-            <button type="button" class="btn btn-warning valider">VALIDER</button>
+            <button type="button" class="btn btn-warning valider">VALIDER MON PSEUDO</button>
         </div>
         <div class="row">
-        <button type="button" class="btn btn-success">ALLEZ ON JOUE ?</button>
+        <button type="button" class="btn btn-success">ALLEZ, ON JOUE ?</button>
         </div>
 </section>
 
@@ -103,7 +103,7 @@ include '../src/functions.php';
             <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Les instructions, c'est ici !
+                        Les instructions, c'est par ici !
                     </button>
                 </h5>
             </div>
