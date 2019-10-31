@@ -48,7 +48,7 @@ function monstre(int $id): array{
     return $content;
 }
 
-function film(int $id): array{
+function filmAPI(int $id): array{
 
     $client = HttpClient::create();
     try {
@@ -126,9 +126,8 @@ function nouvelleQuestion(){
         $_SESSION['AfficheFilms'][$i]=1;
     }
 
-    for ($i=2; $i<4; $i++){
-        $_SESSION['AfficheIndice'][$i]=0;
-    }
+    $_SESSION['AfficheIndice'][2]=0;
+    $_SESSION['AfficheIndice'][3]=0;
 
     $_SESSION["positionBonFilm"]=rand(1, 9);
 }
@@ -142,4 +141,65 @@ function enleveFilms(){
         $_SESSION['AfficheFilms'][$i]=1;
     }
     $_SESSION["positionBonFilm"]=rand(1, 9);
+}
+
+function affichePays(string $pays) : string {
+    $result="pays inconnu";
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Canada"){
+        $result="au Canada";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="French"){
+        $result = "en France";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Germany"){
+        $result = "en Allemagne";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Hong Kong"){
+        $result = "à Hong-Kong";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Italy"){
+        $result = "en Iatalie";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Netherlands"){
+        $result = "aux Pays-Bas";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Norway"){
+        $result = "en Norvège";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="South Korea"){
+        $result = "en Korée du Sud";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Spain"){
+        $result = "";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Sweden"){
+        $result = "en Suède";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Turkey"){
+        $result = "";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="United_Kindgom"){
+        $result = "en Turquie";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Unit d_States"){
+        $result = "aux Etats-Unis";
+    }
+
+    if (filmPays($_SESSION["positionBonFilm"])=="Uruguay"){
+        $result = "en Urugay";
+    }
+    return $result;
 }

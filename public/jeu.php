@@ -32,57 +32,57 @@ include '../src/functions.php';
     <div class="question"><h3>Film <?= $_SESSION["questionEnCours"]; ?>/<?= $filmsATrouver; ?> à deviner</h3></div>
 </section>
 <section class="nickname">
-        <div class="affichAvatar">
-            <img src="<?= monstreImage($_SESSION['avatar']); ?>" class="card-img-top2" alt="...">
-            <div class="card-body">
-                <p class="card-text2"><?= $_SESSION['nickname']; ?></p>
-            </div>
+    <div class="affichAvatar">
+        <img src="<?= monstreImage($_SESSION['avatar']); ?>" class="card-img-top2" alt="...">
+        <div class="card-body">
+            <p class="card-text2"><?= $_SESSION['nickname']; ?></p>
         </div>
+    </div>
 </section>
 <section class="indices">
-        <div class="visuIndices">
-            <div class="indiceFourni"><h2>J'ai été produit en <?= filmAnnee($_SESSION["positionBonFilm"]); ?></h2></div>
-            <div class="indice2"><h2>J'ai été produit en <?= filmPays($_SESSION["positionBonFilm"]); ?></h2></div>
-            <div class="indice3"><h2>J'ai été produit par <?= filmRealisateur($_SESSION["positionBonFilm"]); ?></h2></div>
-        </div>
+    <div class="visuIndices">
+        <div class="indiceFourni"><h2>J'ai été produit en <?= filmAnnee($_SESSION["positionBonFilm"]); ?></h2></div>
+        <div class="indice2"><h2>J'ai été produit en <?= filmPays($_SESSION["positionBonFilm"]); ?></h2></div>
+        <div class="indice3"><h2>J'ai été produit par <?= filmRealisateur($_SESSION["positionBonFilm"]); ?></h2></div>
+    </div>
 </section>
 <section class=points">
-        <div class="visuScore">
-            <h4>sang dispo : <?= $_SESSION["vie"]; ?> Litres</h4>
-        </div>
+    <div class="visuScore">
+        <h4>sang dispo : <?= $_SESSION["vie"]; ?> Litres</h4>
+    </div>
 </section>
 <section class="seringue">
-                <div>
-                    <img src="images/seringue.png" alt="">
-                </div>
+    <div>
+        <img src="images/seringue.png" alt="">
+    </div>
 </section>
 <section class=gestionindices">
-        <div class="indRestants">
-            <p> <?= $_SESSION["indicesRestants"]; ?> indices Restants</p>
-            <a href="/achatIndice.php">
+    <div class="indRestants">
+        <p> <?= $_SESSION["indicesRestants"]; ?> indices Restants</p>
+        <a href="/achatIndice.php">
             <button type="button" id="bouton-ind-restants" class="btn btn-primary">1 indice pour <?= $prixIndice ?> litres ?</button>
-            </a>
-        </div>
+        </a>
+    </div>
 </section>
 <section class="nesertarien"></section>
 <section class=bonus">
-        <div class="bonusRestants">
-            <p> Super-Bonus restants</p>
-            <?php for ($i = 0; $i < $_SESSION["superBonus"]; $i++):?>
-                <a href="/achatSuperBonus.php"><img src="images/oeil.png"></a>
-            <?php endfor; ?>
-        </div>
+    <div class="bonusRestants">
+        <p> Super-Bonus restants</p>
+        <?php for ($i = 0; $i < $_SESSION["superBonus"]; $i++):?>
+            <a href="/achatSuperBonus.php"><img src="images/oeil.png"></a>
+        <?php endfor; ?>
+    </div>
 </section>
 <section class=affichagefilms1">
     <?php if ($_SESSION['AfficheFilms'][1]!=0):?>
-    <div class="affichAvatar card affFilm">
-        <a href="/valideRep.php?id=1">
-        <img src="<?= filmPoster($_SESSION['Films'][1]); ?>" class="card-img-top"  width="300" alt="...">
-        </a>
+        <div class="affichAvatar card affFilm">
+            <a href="/valideRep.php?id=1">
+                <img src="<?= filmPoster($_SESSION['Films'][1]); ?>" class="card-img-top"  width="300" alt="...">
+            </a>
             <div class="card-body">
-            <p class="card-text"><?= filmTitre($_SESSION['Films'][1]); ?></p>
+                <p class="card-text"><?= filmTitre($_SESSION['Films'][1]); ?></p>
+            </div>
         </div>
-    </div>
     <?php endif ?>
 </section>
 <section class=affichagefilms2">
