@@ -51,7 +51,7 @@ $_SESSION["questionEnCours"]=1;
             <a href="/inscription.php"><button type="button" class="btn btn-warning">JOUER</button></a>
         </div>
         <div>
-            <img src="images/home.png" alt="">
+            <img src="images/homexl.png" alt="">
         </div>
     </section>
 
@@ -71,7 +71,7 @@ $_SESSION["questionEnCours"]=1;
                     Tu n'est pas arrivé là par hasard, ta réserve de sang est bien basse et nous avons la solution pour te nourrir, mais il faut gagner ce jeu !<br />
                     Ce défi est-il pour toi ?<br />
                     Tu vas devoir deviner le film qui correspond aux différents indices qui te sont proposés. Mais chaque indice te coûte du sang alors trouves vite la solution.<br />
-                    Comme on est sympa, on t'offre le premier indice et ensuite chacun d'eux vaut 1L de sang. Tu pourras vérifier ton niveau de vie gràca à la seringue.<br />
+                    Comme on est sympa, on t'offre le premier indice et ensuite chacun d'eux vaut 1L de sang. Tu pourras vérifier ton niveau de vie gràce à la seringue.<br />
                     A chaque indice, tu peux faire une proposition en sélectionnant l'une des 10 affiches , tu peux toujours reprendre un indice (il y en a 7 en tout).<br />
                     Tu disposes également de 3 bonus (à -5L) pour les 10 manches.<br />
                     Dès que tu trouves le bon film, tu passes au suivant.<br />

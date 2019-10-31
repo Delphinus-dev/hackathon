@@ -27,149 +27,136 @@ include '../src/functions.php';
 
 
 </head>
-<body>
-
-<main role="main" class="container-fluid">
-    <div class="row bandeau_sup">
-        <div class="col-8 question"><h3>Film <?= $_SESSION["questionEnCours"]; ?>/<?= $filmsATrouver; ?> à trouver</h3></div>
-        <div class="col-4 affichAvatar card" style="width: 18rem;">
-            <img src="<?= monstreImage($_SESSION["avatar"]); ?>" class="card-img-top" height="400px"  alt="...">
+<body class="containerjeu">
+<section class="film">
+    <div class="question"><h3>Film <?= $_SESSION["questionEnCours"]; ?>/<?= $filmsATrouver; ?> à deviner</h3></div>
+</section>
+<section class="nickname">
+        <div class="affichAvatar">
+            <img src="<?= monstreImage($_SESSION["avatar"]); ?>" class="card-img-top2" alt="...">
             <div class="card-body">
-                <p class="card-text"><?= $_SESSION["nickname"]; ?></p>
+                <p class="card-text2"><?= $_SESSION["nickname"]; ?></p>
             </div>
         </div>
-    </div>
-    <div class="row jeuHaut">
-        <div class="col-8 visuIndices">
-            <div class="row indiceFourni"><h3>Texte indice fourni</h3></div>
-            <div class="row indice2"><h3>Texte indice 2</h3></div>
-            <div class="row indice3"><h3>Texte indice 3</h3></div>
-            <div class="row indice4"><h3>Texte indice 4</h3></div>
-            <div class="row indice5"><h3>Texte indice 5</h3></div>
+</section>
+<section class="indices">
+        <div cvisuIndices">
+            <div class="indiceFourni"><h2>Texte indice fourni</h2></div>
+            <div class="indice2"><h2>Texte indice 2</h2></div>
+            <div class="indice3"><h2>Texte indice 3</h2></div>
+            <div class="indice4"><h2>Texte indice 4</h2></div>
+            <div class="indice5"><h2>Texte indice 5</h2></div>
         </div>
-        <div class="col-4 zoneVisuSeringue">
-            <div class="row visuScore">
-                <h4>sang dispo : <b><?= $_SESSION["vie"]; ?> Litres</b></h4>
-            </div>
-            <div class="row visuSeringue">
-                <div class="progress" >
-                    <div class="progress-bar progress-bar2 bg-danger" id="progressbar" data-top="50" data-height="50" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                    </div>
+</section>
+<section class=points">
+        <div class="visuScore">
+            <h4>sang dispo : <?= $_SESSION["vie"]; ?> Litres</h4>
+        </div>
+</section>
+<section class="seringue">
+                <div>
+                    <img src="images/seringue.png" alt="">
                 </div>
-                <div class=""></div>
-            </div>
-        </div>
-    </div>
-    <div class="row gestionIndices">
-        <div class="col-6 indRestants">
+</section>
+<section class=gestionindices">
+        <div class="indRestants">
             <p> <?= $_SESSION["indicesRestants"]; ?> indices Restants</p>
             <button type="button" id="bouton-ind-restants" class="btn btn-primary">1 indice pour <?= $prixIndice ?> litres ?</button>
         </div>
-        <div class="col-6 bonusRestants">
+</section>
+<section class=bonus">
+        <div class="bonusRestants">
             <p> X super-bonus</p>
             <?php for ($i = 0; $i < $_SESSION["superBonus"]; $i++):?>
                 <a href=""><img src="images/oeil.png"></a>
             <?php endfor; ?>
-
+        </div>
+</section>
+<section class=affichagefilms1">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
         </div>
     </div>
-
-    <div class="row affichageFilms">
-
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
+</section>
+<section class=affichagefilms2">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
         </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 col3Films">
-            <div class="affichAvatar card affFilm">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Titre du film</p>
-                </div>
-            </div>
-        </div>
-
     </div>
+</section>
+<section class=affichagefilms3">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms4">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms5">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms6">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms7">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms8">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
+<section class=affichagefilms9">
+    <div class="affichAvatar card affFilm">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-text">Titre du film</p>
+        </div>
+    </div>
+</section>
 
-
-</main>
-<section  id="accordion">
-    <div class="row">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Les instructions, c'est ici !
-                    </button>
-                </h5>
-            </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
+<section  id="accordion3">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Les instructions, c'est ici !
+                </button>
+            </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
             </div>
         </div>
     </div>

@@ -22,13 +22,13 @@
         </audio>
         </div>
         <div>
-            <button type="button" class="play btn-warning ">REJOUER</button>
+            <button type="button" class="rejouer">REJOUER</button>
         </div>
         <div class="textgameover">
             <h1> TU AS PERDU ! <br /> TU ES MORT DE FAIM, ALORS REJOUES</h1>
         </div>
         <div>
-            <img src="images/gameover.png" alt="">
+            <img src="images/gameoverxl.png" alt="">
 
         </div>
     </section>

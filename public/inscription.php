@@ -77,7 +77,7 @@ include '../src/functions.php';
 <section class="name">
     <div class="row2">
         <div>
-            <h1>NOMME TON MONSTRE</h1>
+            <h1>NOMMES TON MONSTRE</h1>
         </div>
         <form method="post">
             <div>
@@ -91,7 +91,7 @@ include '../src/functions.php';
     </div>
 </section>
 
-<section  id="accordion">
+<section  id="accordion-inscription">
     <div class="row">
         <div class="card">
             <div class="card-header" id="headingOne">
