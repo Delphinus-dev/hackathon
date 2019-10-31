@@ -193,8 +193,16 @@ include '../src/functions.php';
         </div>
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
+                Bienvenue sur Horror Quizz ! <br />
+                Tu n'est pas arrivé là par hasard, ta réserve de sang est bien basse et nous avons la solution pour te nourrir, mais il faut gagner ce jeu !<br />
+                Ce défi est-il pour toi ?<br />
+                Tu vas devoir deviner le film qui correspond aux différents indices qui te sont proposés. Mais chaque indice te coûte du sang alors trouves vite la solution.<br />
+                Comme on est sympa, on t'offre le premier indice et ensuite chacun d'eux vaut 1L de sang. Tu pourras vérifier ton niveau de vie gràce à la seringue.<br />
+                A chaque indice, tu peux faire une proposition en sélectionnant l'une des 10 affiches , tu peux toujours reprendre un indice (il y en a 7 en tout).<br />
+                Tu disposes également de 3 bonus (à -5L) pour les 10 manches.<br />
+                Dès que tu trouves le bon film, tu passes au suivant.<br />
+                Alors bon courage !
+                 </div>
         </div>
     </div>
 </section>
