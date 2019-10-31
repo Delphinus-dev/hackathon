@@ -8,7 +8,7 @@
     <meta name="author" content="Laurent Touret">
     <meta name="generator" content="Jekyll v3.8.5">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/inscription.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
     <title>Horror Quizz</title>
@@ -161,7 +161,7 @@
 </section>
 
 <section class="name">
-    <div class="row" class="">
+    <div class="row2">
         <div>
             <h1>NOMMES TON MONSTRE</h1>
         </div>
@@ -173,7 +173,7 @@
     </form>
     </div>
         <div class="row">
-            <button type="button" class="btn btn-warning">VALIDER</button>
+            <button type="button" class="btn btn-warning valider">VALIDER</button>
         </div>
         <div class="row">
         <button type="button" class="btn btn-success">ALLEZ ON JOUE ?</button>
