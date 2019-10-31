@@ -1,3 +1,9 @@
+<?php
+
+include '../src/functions.php';
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -20,6 +26,17 @@
         <h1>CHOISIS TON MONSTRE</h1>
     </div>
     <div class="row">
+
+        <?php
+        for ($avatar; $avatar < 3; $avatar++):?>
+            <div class="col-sm card">
+            <img class="card-img-top" src="<?php monstreImage($avatar); ?>" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">Maid Ghoul</p>
+            </div>
+        </div>
+        <?php endfor; ?>
+
         <div class="col-sm card">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
@@ -163,7 +180,7 @@
 <section class="name">
     <div class="row2">
         <div>
-            <h1>NOMMES TON MONSTRE</h1>
+            <h1>NOMME TON MONSTRE</h1>
         </div>
     <form method="post">
         <div>
