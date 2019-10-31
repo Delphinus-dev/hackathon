@@ -428,7 +428,6 @@ img {
 }
 
 
-
 #podium-box {
     margin: 0 auto;
     display: flex;
@@ -491,12 +490,13 @@ h1{
 .name{
     color: #fff;
     background-color: #000;
+    text-align: center;
 }
 .btn-success{
     width: 200px;
     height: auto;
     float: none;
-    margin: 10px auto auto 80%;
+    margin: 10px auto auto 230%;
 }
 
     /*----------WINNER----------*/
