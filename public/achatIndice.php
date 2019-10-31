@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION["avatar"]=$_GET [ 'id' ] ;
+include '../src/functions.php';
+if ($_SESSION["indicesRestants"]>=0) {
+    $_SESSION["indicesRestants"]-=1;
+    $_SESSION["vie"]-=$prixIndice;
+}
 
-header('Location: inscription.php');
+header('Location: jeu.php');
 exit;

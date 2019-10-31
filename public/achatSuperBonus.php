@@ -1,6 +1,10 @@
 <?php
 session_start();
-$_SESSION["avatar"]=$_GET [ 'id' ] ;
+include '../src/functions.php';
+if ($_SESSION["superBonus"]>=0) {
+    $_SESSION["superBonus"]-=1;
+    $_SESSION["vie"]-=$prixSuperBonus;
+}
 
-header('Location: inscription.php');
+header('Location: jeu.php');
 exit;

@@ -1,33 +1,14 @@
 <?php
 session_start();
-include '../src/config.php';
+include '../src/functions.php';
+
 $_SESSION["avatar"]="1";
 $_SESSION["nickname"]="Guest";
-$_SESSION["bonFilm"]=rand(1, 82);
 $_SESSION["vie"]=$vieInitiale;
 $_SESSION["superBonus"]=3;
-
-$_SESSION["badFilm1"]=rand(1, 82);
-$_SESSION["badFilm2"]=rand(1, 82);
-$_SESSION["badFilm3"]=rand(1, 82);
-$_SESSION["badFilm4"]=rand(1, 82);
-$_SESSION["badFilm5"]=rand(1, 82);
-$_SESSION["badFilm6"]=rand(1, 82);
-$_SESSION["badFilm7"]=rand(1, 82);
-$_SESSION["badFilm8"]=rand(1, 82);
-
-$_SESSION["positionBonFilm"]=rand(1, 9);
-$_SESSION["positionBadFilm1"]=rand(1, 9);
-$_SESSION["positionBadFilm2"]=rand(1, 9);
-$_SESSION["positionBadFilm3"]=rand(1, 9);
-$_SESSION["positionBadFilm4"]=rand(1, 9);
-$_SESSION["positionBadFilm5"]=rand(1, 9);
-$_SESSION["positionBadFilm6"]=rand(1, 9);
-$_SESSION["positionBadFilm7"]=rand(1, 9);
-$_SESSION["positionBadFilm8"]=rand(1, 9);
-
 $_SESSION["questionEnCours"]=1;
 
+nouvelleQuestion();
 ?>
 <!doctype html>
 <html lang="en">
