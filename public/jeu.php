@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <head>
@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lacquer%7CPrompt&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Laurent Touret">
+    <meta name="author" content="Les Yeuvs">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>PROJET</title>
 
