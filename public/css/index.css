@@ -1,7 +1,7 @@
 @media (max-width: 640px){
 * {
     margin: 0;
-    padding:0;
+
 }
 
 body {
@@ -12,14 +12,20 @@ body {
 .container-fluid {
     padding: 0;
     font-family: 'Prompt', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto;
     }
 
 .home {
     grid-row: 1/2;
-    width: 640px;
     position: relative;
 
 }
+img {
+    width: 100%;
+}
+
 .btn-warning{
     position: absolute;
     margin-left: 80%;
@@ -107,150 +113,150 @@ height: 35%;
 height: 30%;
 }
 /*----------INSCRIPTION----------*/
-    .container {
-        margin: 0;
-        padding: 0;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 427px auto auto auto auto;
-        font-family: 'Prompt', sans-serif;
-    }
+.container {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 427px auto auto auto auto;
+    font-family: 'Prompt', sans-serif;
+}
 
-    h1 {
-        color: #ffffff;
-        font-family: 'Lacquer', sans-serif;
-        margin-left: 10px;
-    }
+h1 {
+    color: #ffffff;
+    font-family: 'Lacquer', sans-serif;
+    margin-left: 10px;
+}
 
-    .card-text {
-        color: #ffffff;
-        font-family: 'Lacquer', sans-serif;
-        text-align: center;
-    }
+.card-text {
+    color: #ffffff;
+    font-family: 'Lacquer', sans-serif;
+    text-align: center;
+}
 
-    .form{
-        color: #ffffff;
-        font-family: 'Lacquer', sans-serif;
-        text-align: center;
-        margin-left: 10px;
-    }
-    .name{
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
+.form{
+    color: #ffffff;
+    font-family: 'Lacquer', sans-serif;
+    text-align: center;
+    margin-left: 10px;
+}
+.name{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
-    .btn-success{
-        width: 200px;
-        height: auto;
-        float: none;
-        margin: 0 auto;
-    }
+.btn-success{
+    width: 200px;
+    height: auto;
+    float: none;
+    margin: 0 auto;
+}
 
-    .valider {
+.valider {
 
-        width: 100px;
-        height: auto;
-        float: none;
-        margin: 0 auto;
-        margin-bottom: 20px;
-    }
+    width: 100px;
+    height: auto;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
     /*----------JEU---------*/
 
-    .row, .col-4, .col-6, .col-8 {
-        margin: 0 auto;
-        /* Encadré pour voir les limites du formulaire */
-        padding: 5px;
-        border: 1px solid #CCC;
-        border-radius: 1em;
-    }
+.row, .col-4, .col-6, .col-8 {
+    margin: 0 auto;
+    /* Encadré pour voir les limites du formulaire */
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
 
-    .zoneVisuSeringue {
-        padding: 0;
+.zoneVisuSeringue {
+    padding: 0;
 
-    }
+}
 
-    .visuScore {
-        height: 60px;
-    }
+.visuScore {
+    height: 60px;
+}
 
-    .visuSeringue {
-        background-image: url("../images/seringue.png");
-        height: 350px;
-        width: 100px;
-        margin: 0 auto;
-        position: relative;
+.visuSeringue {
+    background-image: url("../images/seringue.png");
+    height: 350px;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
 
-    }
+}
 
-    /*.niveauSang {
-        background-color: darkred;
-        width: 100%;
-        margin-right: 35px;
-        margin-left: 25px;
-        margin-bottom: 50px;
-        !*height: 100px;*!
-    }*/
+/*.niveauSang {
+    background-color: darkred;
+    width: 100%;
+    margin-right: 35px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    !*height: 100px;*!
+}*/
 
-    .progress{
-        position: absolute;left:32%;top:35%;width: 20%;height:50%;opacity: 0.8; filter: alpha(opacity=80);
-    }
-    .progress-bar{
-        position:absolute; width: 100%;top:50%;height: 50%;
-    }
+.progress{
+    position: absolute;left:32%;top:35%;width: 20%;height:50%;opacity: 0.8; filter: alpha(opacity=80);
+}
+.progress-bar{
+    position:absolute; width: 100%;top:50%;height: 50%;
+}
 
 
-    .bandeau_sup {
-        height: 120px;
-    }
+.bandeau_sup {
+    height: 120px;
+}
 
-    .affichAvatar {
-        height: 115px;
-        margin: auto;
-    }
+.affichAvatar {
+    height: 115px;
+    margin: auto;
+}
 
-    .affichAvatar .card-body {
-        padding: 0;
-    }
+.affichAvatar .card-body {
+    padding: 0;
+}
 
-    .jeuHaut {
-        height: 420px;
-    }
+.jeuHaut {
+    height: 420px;
+}
 
-    .visuIndices .row {
-        height: 50px;
-        margin: 10px auto;
-    }
+.visuIndices .row {
+    height: 50px;
+    margin: 10px auto;
+}
 
-    .visuScore h4 {
-        margin: auto;
-    }
+.visuScore h4 {
+    margin: auto;
+}
 
-    .gestionIndices {
-        height: 140px;
-    }
+.gestionIndices {
+    height: 140px;
+}
 
-    .affichageFilms {
-        height: 400px;
-    }
+.affichageFilms {
+    height: 400px;
+}
 
-    .gestionIndices img {
-        height: 45%;
-        margin: 0 30%;
-    }
+.gestionIndices img {
+    height: 45%;
+    margin: 0 30%;
+}
 
-    .gestionIndices p {
-        margin: 0;
-        text-align: center;
-    }
+.gestionIndices p {
+    margin: 0;
+    text-align: center;
+}
 
-    .gestionIndices button {
-        margin: 0 20px;
-        width: 100px;
-    }
+.gestionIndices button {
+    margin: 0 20px;
+    width: 100px;
+}
 
-    .affichAvatar {
-        padding: 0;
-        width: 200px;
-    }
+.affichAvatar {
+    padding: 0;
+    width: 200px;
+}
 }

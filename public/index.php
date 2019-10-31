@@ -17,10 +17,10 @@
 <body class="container-fluid">
     <section class="home">
         <div>
-        <button type="button" class="btn btn-warning">JOUER</button>
+            <button type="button" class="btn btn-warning">JOUER</button>
         </div>
         <div>
-        <img src="images/home.png" alt>
+            <img src="images/home.png" alt="">
         </div>
     </section>
 
